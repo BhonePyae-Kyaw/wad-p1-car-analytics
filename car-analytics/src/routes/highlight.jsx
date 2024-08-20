@@ -1,9 +1,12 @@
 import React from "react";
+import "../styles/highlight.css";
+import Menu from "../components/menu";
 
 function Highlight() {
   return (
-    <div>
-      <p>Highlight</p>
+    <div id="highlight">
+      <Menu />
+      <div>Highlight</div>
     </div>
   );
 }

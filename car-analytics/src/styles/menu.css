@@ -1,0 +1,42 @@
+#menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 4px;
+}
+
+#menu-container a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.active {
+  color: rgb(59, 129, 144);
+  font-weight: 600;
+  font-size: larger;
+}
+
+.items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+  color: slategray;
+  gap: 4px;
+}
+
+.list {
+  gap: 20px;
+}
+
+.list-items {
+  cursor: pointer;
+}
+
+#logo-image {
+  width: 48px;
+  height: 48px;
+}
