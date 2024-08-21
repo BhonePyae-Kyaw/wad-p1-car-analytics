@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../styles/dashboard.css";
 import Menu from "../components/menu";
-import cars from "../assets/json/taladrod-cars.min.json";
+import cars from "../assets/json/taladrod-cars.json";
 import TableComponent from "../components/table";
 
 function Dashboard() {
   const [carData, setCarData] = useState([]);
   console.log(cars);
+  const [brands, setBrands] = useState([]);
+  const [carsCount, setCarsCount] = useState([]);
 
   useEffect(() => {
     const processData = () => {
@@ -46,11 +48,19 @@ function Dashboard() {
           })),
         })
       );
+      const brands = formattedData.map((data) => data.brand);
+      const carsCount = formattedData.map((data) => data.totalCars);
       setCarData(formattedData);
+      setBrands(brands);
+      setCarsCount(carsCount);
     };
+
     processData();
   }, []);
+
   console.log(carData);
+  console.log(brands); // use these for the charts (Pie chart)
+  console.log(carsCount); // use these for the charts (Pie chart)
 
   return (
     <div id="dashboard">
