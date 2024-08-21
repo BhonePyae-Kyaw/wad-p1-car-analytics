@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid lightgray;
-  padding: 4px;
+  padding: 12px;
 }
 
 #menu-container a {
@@ -13,7 +13,7 @@
 }
 
 .active {
-  color: rgb(59, 129, 144);
+  color: #009879;
   font-weight: 600;
   font-size: larger;
 }

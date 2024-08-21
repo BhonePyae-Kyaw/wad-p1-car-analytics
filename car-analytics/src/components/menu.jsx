@@ -11,7 +11,7 @@ function Menu() {
           <div>
             <img id="logo-image" src={images.car} alt="Car Logo" />
           </div>
-          <div>Car Analytics</div>
+          <div style={{ color: "#009879" }}>Car Analytics</div>
         </div>
       </NavLink>
       <div className="items-container list">

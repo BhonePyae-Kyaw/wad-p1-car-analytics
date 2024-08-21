@@ -1,33 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "../styles/dashboard.css";
 import Menu from "../components/menu";
-import cars from "../assets/json/cars.min.json";
+import cars from "../assets/json/taladrod-cars.min.json";
+import TableComponent from "../components/table";
 
 function Dashboard() {
   const [carData, setCarData] = useState([]);
+  console.log(cars);
 
   useEffect(() => {
     const processData = () => {
       const brandModelMap = {};
 
       cars.Cars.forEach((car) => {
-        const brand = car.NameMMT.split(" ")[0]; // Assuming brand is the first word in NameMMT
-        const model = car.Model;
+        const brand = car.NameMMT.split(" ")[0]; // Get the brand name
+        const model = car.Model; // Get the model name
         const price = parseInt(car.Prc.replace(/,/g, ""), 10); // Remove commas and convert to integer
 
         if (!brandModelMap[brand]) {
+          // If the brand is not in the map, add it
           brandModelMap[brand] = { totalCars: 0, totalValue: 0, models: {} };
         }
 
-        brandModelMap[brand].totalCars += 1;
-        brandModelMap[brand].totalValue += price;
+        brandModelMap[brand].totalCars += 1; // Increment the total cars
+        brandModelMap[brand].totalValue += price; // Increment the total value
 
         if (!brandModelMap[brand].models[model]) {
-          brandModelMap[brand].models[model] = { count: 0, value: 0 };
+          // If the model is not in the map, add it
+          brandModelMap[brand].models[model] = { count: 0, value: 0 }; // Initialize the count and value
         }
 
-        brandModelMap[brand].models[model].count += 1;
-        brandModelMap[brand].models[model].value += price;
+        brandModelMap[brand].models[model].count += 1; // Increment the count
+        brandModelMap[brand].models[model].value += price; // Increment the value
       });
 
       const formattedData = Object.entries(brandModelMap).map(
@@ -42,55 +46,23 @@ function Dashboard() {
           })),
         })
       );
-
       setCarData(formattedData);
     };
-
     processData();
   }, []);
+  console.log(carData);
 
   return (
     <div id="dashboard">
       <Menu />
+      {/* Charts starts here */}
+      <div>Pie Chart</div>
+      <div>Bar Chart</div>
       <div className="dashboard-content">
-        <h1>Car Dashboard</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Brand</th>
-              <th>Total Cars</th>
-              <th>Total Value (Baht)</th>
-              <th>Model</th>
-              <th>Model Count</th>
-              <th>Model Value (Baht)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {carData.map((brandData, index) => (
-              <React.Fragment key={index}>
-                <tr>
-                  <td rowSpan={brandData.models.length + 1}>
-                    {brandData.brand}
-                  </td>
-                  <td rowSpan={brandData.models.length + 1}>
-                    {brandData.totalCars}
-                  </td>
-                  <td rowSpan={brandData.models.length + 1}>
-                    {brandData.totalValue.toLocaleString()}
-                  </td>
-                </tr>
-                {brandData.models.map((modelData, idx) => (
-                  <tr key={idx}>
-                    <td>{modelData.model}</td>
-                    <td>{modelData.count}</td>
-                    <td>{modelData.value.toLocaleString()}</td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
+        <TableComponent carData={carData} />
       </div>
+      {/* Car showing starts here */}
+      <div>Cars showing</div>
     </div>
   );
 }
