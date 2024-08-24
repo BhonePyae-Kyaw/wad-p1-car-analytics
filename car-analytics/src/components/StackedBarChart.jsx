@@ -1,5 +1,5 @@
 // StackedBarChart.jsx
-import React from 'react';
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,8 +8,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -21,11 +21,11 @@ ChartJS.register(
 );
 
 function StackedBarChart({ carData }) {
-  const brands = carData.map(item => item.brand);
+  const brands = carData.map((item) => item.brand);
   const allModels = new Set();
 
-  carData.forEach(brand => {
-    brand.models.forEach(model => {
+  carData.forEach((brand) => {
+    brand.models.forEach((model) => {
       allModels.add(model.model);
     });
   });
@@ -41,8 +41,8 @@ function StackedBarChart({ carData }) {
   const uniqueColors = generateUniqueColors(allModels.size);
 
   const datasets = Array.from(allModels).map((model, index) => {
-    const data = carData.map(brand => {
-      const modelData = brand.models.find(m => m.model === model);
+    const data = carData.map((brand) => {
+      const modelData = brand.models.find((m) => m.model === model);
       return modelData ? modelData.count : 0;
     });
 
@@ -53,7 +53,11 @@ function StackedBarChart({ carData }) {
     };
   });
 
-  datasets.sort((a, b) => b.data.reduce((sum, val) => sum + val, 0) - a.data.reduce((sum, val) => sum + val, 0));
+  datasets.sort(
+    (a, b) =>
+      b.data.reduce((sum, val) => sum + val, 0) -
+      a.data.reduce((sum, val) => sum + val, 0)
+  );
 
   const options = {
     responsive: true,
@@ -61,7 +65,7 @@ function StackedBarChart({ carData }) {
     plugins: {
       title: {
         display: true,
-        text: 'Car Models by Brand',
+        text: "Car Models Distribution by Brand Chart",
         font: {
           size: 18,
         },
@@ -86,15 +90,33 @@ function StackedBarChart({ carData }) {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%', display: 'flex' }}>
-      <div style={{ width: '80%', height: '100%', paddingRight: '20px' }}>
+    <div style={{ width: "100%", height: "100%", display: "flex" }}>
+      <div style={{ width: "80%", height: "100%", paddingRight: "20px" }}>
         <Bar options={options} data={data} />
       </div>
-      <div style={{ width: '20%', height: '100%', overflowY: 'auto', paddingLeft: '20px', borderLeft: '1px solid #e0e0e0' }}>
+      <div
+        style={{
+          width: "20%",
+          height: "100%",
+          overflowY: "auto",
+          paddingLeft: "20px",
+          borderLeft: "1px solid #e0e0e0",
+        }}
+      >
         {datasets.map((dataset, index) => (
-          <div key={index} style={{ display: 'flex', alignItems: 'center', margin: '5px 0' }}>
-            <div style={{ width: '10px', height: '10px', backgroundColor: dataset.backgroundColor, marginRight: '5px' }}></div>
-            <span style={{ fontSize: '10px' }}>{dataset.label}</span>
+          <div
+            key={index}
+            style={{ display: "flex", alignItems: "center", margin: "5px 0" }}
+          >
+            <div
+              style={{
+                width: "10px",
+                height: "10px",
+                backgroundColor: dataset.backgroundColor,
+                marginRight: "5px",
+              }}
+            ></div>
+            <span style={{ fontSize: "10px" }}>{dataset.label}</span>
           </div>
         ))}
       </div>

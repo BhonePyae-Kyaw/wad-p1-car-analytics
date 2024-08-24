@@ -19,7 +19,7 @@ function Dashboard() {
       cars.Cars.forEach((car) => {
         const brand = car.NameMMT.split(" ")[0];
         const model = car.Model;
-        const price = parseInt(car.Prc.replace(/,/g, ""), 10);
+        const price = parseInt(car.Prc.replace(/[^0-9]/g, ""), 10); //remove non-numeric characters
 
         if (!brandModelMap[brand]) {
           brandModelMap[brand] = { totalCars: 0, totalValue: 0, models: {} };
@@ -62,18 +62,22 @@ function Dashboard() {
     <div id="dashboard">
       <Menu />
       {/* Charts start here */}
-      <div className="charts-container" style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '20px',
-        gap: '20px',
-        height: 'calc(100vh - 60px)', // Assuming Menu height is 60px
-      }}>
-        <div style={{ flex: 1, minHeight: '0' }}>
+      <div
+        className="charts-container"
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          gap: "20px",
+          padding: "10px",
+          height: "100%",
+        }}
+      >
+        <div style={{ flex: 1, minHeight: "0" }}>
           <DoughnutChart brands={brands} carsCount={carsCount} />
         </div>
-        <div style={{ flex: 1, minHeight: '0' }}>
+        <div style={{ flex: 1, minHeight: "0" }}>
           <StackedBarChart carData={carData} />
         </div>
       </div>
