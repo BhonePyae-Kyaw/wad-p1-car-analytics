@@ -13,15 +13,18 @@ function Dashboard() {
   const [carData, setCarData] = useState([]);
   const [brands, setBrands] = useState([]);
   const [carsCount, setCarsCount] = useState([]);
-
-  const testCar = cars.Cars[0];
+  const [filteredCars, setFilteredCars] = useState(cars);
+  const [activeMkID, setActiveMkID] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 32;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = cars.Cars.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredCars?.Cars.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   useEffect(() => {
     const processData = () => {
@@ -69,6 +72,12 @@ function Dashboard() {
     processData();
   }, []);
 
+  const handleFilter = (mkid) => {
+    const filteredCars = cars.Cars.filter((car) => car.MkID === mkid);
+    setFilteredCars({ Cars: filteredCars });
+    setActiveMkID(mkid);
+  };
+
   return (
     <div id="dashboard">
       <Menu />
@@ -88,6 +97,7 @@ function Dashboard() {
         <div style={{ flex: 1, minHeight: "0" }}>
           <DoughnutChart brands={brands} carsCount={carsCount} />
         </div>
+        <br />
         <div style={{ flex: 1, minHeight: "0" }}>
           <StackedBarChart carData={carData} />
         </div>
@@ -97,16 +107,33 @@ function Dashboard() {
       </div>
       {/* Car showing starts here */}
       <div id="cars-container">
-        <b style={{ fontSize: "24px" }}>Car Cards</b>
-        <div></div>
-        <div className="card-spacing">
+        <b style={{ fontSize: "24px" }}>Car</b>
+        <div className="filter-items">
+          {cars.MMList.map((car) => (
+            <div
+              key={car.mkID}
+              className={`car-brand ${activeMkID === car.mkID ? "active" : ""}`}
+              onClick={() => handleFilter(car.mkID)}
+              style={{
+                cursor: "pointer",
+                backgroundColor:
+                  activeMkID === car.mkID ? "#009879" : "transparent",
+                color: activeMkID === car.mkID ? "white" : "black",
+              }}
+            >
+              {car.Name}
+            </div>
+          ))}
+        </div>
+
+        <div className="card-spacing" style={{ marginTop: "20px" }}>
           {currentItems.map((car, index) => (
             <Cards key={index} car={car} />
           ))}
         </div>
         <Pagination
           currentPage={currentPage}
-          totalItems={cars.Cars.length}
+          totalItems={filteredCars.Cars.length}
           itemsPerPage={itemsPerPage}
           onPageChange={setCurrentPage}
         />
