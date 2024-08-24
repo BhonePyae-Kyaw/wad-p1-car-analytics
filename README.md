@@ -2,16 +2,22 @@
 
 ## Project Description
 
-Car Analytics is a web application designed to provide users with detailed insights and analytics related to various car models. The application allows users to compare car features, performance metrics, and pricing, helping them make informed decisions. Whether you're a car enthusiast, a buyer, or just curious about car specifications, Car Analytics offers a comprehensive platform to explore and analyze car data.
+Car Analytics is a web application for market owners, offering detailed insights into various car models and brands. The platform features tables for model and brand comparisons, bar and pie charts for brand distribution, and car cards displaying essential details. Additionally, the highlight page allows users to view and manage their favorited cars.
 
 ## Features
-
+**Dash Board**
 - **Car Model Comparison:** Compare different car models based on various specifications such as engine performance, fuel efficiency, safety ratings, and more.
-- **Interactive Visualizations:** Explore data through interactive charts and graphs that present car analytics in an easy-to-understand format.
-- **User-Friendly Interface:** Navigate through the application with a clean and intuitive interface designed for a seamless user experience.
+- **Interactive Visualizations:** Explore data through interactive charts and graphs that present car brand distribution in an easy-to-understand format.
 - **Search Functionality:** Quickly find specific car models or brands using the powerful search feature.
-- **Data Export:** Export analytics reports in various formats such as PDF and CSV for offline analysis.
-- **Responsive Design:** Fully responsive design that works seamlessly across all devices, including desktops, tablets, and smartphones.
+- **Price Overview:** View and compare prices of various car models and brands in a clear and organized table.
+
+**Car Cards**
+- **Detailed Information:** Each car card displays essential details such as model, year, price, and location, giving market owners a quick overview of the cars available.
+- **Favorite Feature:** Easily mark cars as favorites to keep track of them for future reference.
+
+**Highlight Page**
+- **Favorited Cars Display:** View all the cars you’ve favorited in one place, organized similarly to the dashboard but without pagination.
+- **Remove from Highlights:** Quickly remove cars from your favorites with a single click.
 
 ## Screenshots
 
@@ -21,13 +27,12 @@ Car Analytics is a web application designed to provide users with detailed insig
 ![Comparison Page](path/to/screenshot2.png)
 *Description of the comparison page or feature showcased*
 
-## Team Members
+## Project Members
 
-- **[Your Name]** - Project Lead & Backend Developer
-- **[Team Member 1]** - Frontend Developer
-- **[Team Member 2]** - Data Analyst
-- **[Team Member 3]** - UI/UX Designer
-- **[Team Member 4]** - Quality Assurance
+**CSX4107-WAD Sec542**
+- **6530173 - Moe Myint Mo San** 
+- **6530327 - Bhone Pyae Kyaw** 
+- **6530377 - Kyaw Ye Lwin@ANMOL** 
 
 ## Getting Started
 
