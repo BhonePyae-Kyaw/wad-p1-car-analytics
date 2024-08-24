@@ -1,12 +1,14 @@
+// Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/dashboard.css";
 import Menu from "../components/menu";
 import cars from "../assets/json/taladrod-cars.json";
 import TableComponent from "../components/table";
+import DoughnutChart from "../components/DoughnutChart";
+import StackedBarChart from "../components/StackedBarChart";
 
 function Dashboard() {
   const [carData, setCarData] = useState([]);
-  console.log(cars);
   const [brands, setBrands] = useState([]);
   const [carsCount, setCarsCount] = useState([]);
 
@@ -15,25 +17,23 @@ function Dashboard() {
       const brandModelMap = {};
 
       cars.Cars.forEach((car) => {
-        const brand = car.NameMMT.split(" ")[0]; // Get the brand name
-        const model = car.Model; // Get the model name
-        const price = parseInt(car.Prc.replace(/,/g, ""), 10); // Remove commas and convert to integer
+        const brand = car.NameMMT.split(" ")[0];
+        const model = car.Model;
+        const price = parseInt(car.Prc.replace(/,/g, ""), 10);
 
         if (!brandModelMap[brand]) {
-          // If the brand is not in the map, add it
           brandModelMap[brand] = { totalCars: 0, totalValue: 0, models: {} };
         }
 
-        brandModelMap[brand].totalCars += 1; // Increment the total cars
-        brandModelMap[brand].totalValue += price; // Increment the total value
+        brandModelMap[brand].totalCars += 1;
+        brandModelMap[brand].totalValue += price;
 
         if (!brandModelMap[brand].models[model]) {
-          // If the model is not in the map, add it
-          brandModelMap[brand].models[model] = { count: 0, value: 0 }; // Initialize the count and value
+          brandModelMap[brand].models[model] = { count: 0, value: 0 };
         }
 
-        brandModelMap[brand].models[model].count += 1; // Increment the count
-        brandModelMap[brand].models[model].value += price; // Increment the value
+        brandModelMap[brand].models[model].count += 1;
+        brandModelMap[brand].models[model].value += price;
       });
 
       const formattedData = Object.entries(brandModelMap).map(
@@ -58,16 +58,25 @@ function Dashboard() {
     processData();
   }, []);
 
-  console.log(carData);
-  console.log(brands); // use these for the charts (Pie chart)
-  console.log(carsCount); // use these for the charts (Pie chart)
-
   return (
     <div id="dashboard">
       <Menu />
-      {/* Charts starts here */}
-      <div>Pie Chart</div>
-      <div>Bar Chart</div>
+      {/* Charts start here */}
+      <div className="charts-container" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '20px',
+        gap: '20px',
+        height: 'calc(100vh - 60px)', // Assuming Menu height is 60px
+      }}>
+        <div style={{ flex: 1, minHeight: '0' }}>
+          <DoughnutChart brands={brands} carsCount={carsCount} />
+        </div>
+        <div style={{ flex: 1, minHeight: '0' }}>
+          <StackedBarChart carData={carData} />
+        </div>
+      </div>
       <div className="dashboard-content">
         <TableComponent carData={carData} />
       </div>
