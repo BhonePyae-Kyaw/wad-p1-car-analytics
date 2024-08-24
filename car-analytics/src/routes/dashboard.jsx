@@ -96,20 +96,20 @@ function Dashboard() {
         <TableComponent carData={carData} />
       </div>
       {/* Car showing starts here */}
-      <div>
-        <b style={{fontSize: '24px'}}>Car Cards</b>
+      <div id="cars-container">
+        <b style={{ fontSize: "24px" }}>Car Cards</b>
         <div></div>
         <div className="card-spacing">
           {currentItems.map((car, index) => (
             <Cards key={index} car={car} />
-            ))}
+          ))}
         </div>
-        <Pagination 
-                currentPage={currentPage}
-                totalItems={cars.Cars.length}
-                itemsPerPage={itemsPerPage}
-                onPageChange={setCurrentPage}
-            />
+        <Pagination
+          currentPage={currentPage}
+          totalItems={cars.Cars.length}
+          itemsPerPage={itemsPerPage}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );

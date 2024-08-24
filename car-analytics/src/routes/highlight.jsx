@@ -4,43 +4,33 @@ import Menu from "../components/menu";
 import Cards from "../components/card"; // Ensure the correct path and filename casing
 
 function Highlight() {
-
-
-
   const [highlightedCars, setHighlightedCars] = useState([]);
+
+  const getHighlights = () => {
+    const storedHighlights =
+      JSON.parse(localStorage.getItem("highlights")) || [];
+    setHighlightedCars(storedHighlights);
+  };
 
   // Retrieve favorited cars from local storage when the component mounts
   useEffect(() => {
-    const storedHighlights = JSON.parse(localStorage.getItem('highlights')) || [];
-    setHighlightedCars(storedHighlights);
+    getHighlights();
   }, []);
-
-  // Handle removal of a car from the highlights
-  const removeHighlight = (Cid) => {
-    const updatedHighlights = highlightedCars.filter(car => car.Cid !== Cid);
-    setHighlightedCars(updatedHighlights);
-    localStorage.setItem('highlights', JSON.stringify(updatedHighlights));
-  };
 
   return (
     <div id="highlight">
       <Menu />
       <div className="highlight-content">
         {highlightedCars.length > 0 ? (
-          highlightedCars.map(car => (
+          highlightedCars.map((car) => (
             <div key={car.Cid} className="highlighted-card">
               <Cards car={car} />
-              <button
-                className="remove-button"
-                onClick={() => removeHighlight(car.Cid)}
-                title="Remove from highlights"
-              >
-                &times;
-              </button>
             </div>
           ))
         ) : (
-          <p>No cars highlighted yet!</p>
+          <p style={{ color: "#009879", fontSize: "24px" }}>
+            No cars highlighted yet!
+          </p>
         )}
       </div>
       {/* <div>
