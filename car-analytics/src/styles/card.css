@@ -1,0 +1,124 @@
+.card-container {
+    flex: 1 1 calc(25% - 20px); /* Adjust card size based on your layout */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #edf2f7;
+    width: 100%;
+    position: relative;
+}
+
+.card {
+    height: 420px;
+    width: 100%;
+    /* max-width: 400px;
+    min-width: 270px; */
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.heart-icon {
+    /* position: absolute;
+    max-width: 10px;
+    max-height: 10px;
+    padding-left: 260px; */
+    position: absolute;
+    
+    width: 30px;  /* Set an appropriate size */
+    height: 30px; /* Set an appropriate size */
+    z-index: 10;
+    right: 10px; /* Adjust position as needed */
+     /* Ensure it stays on top */
+}
+
+.card-details {
+    margin-left: 10px;
+}
+
+.card-property-age {
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4a5568;
+}
+
+.card-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a202c;
+}
+
+.card-name {
+    font-size: 0.5rem;
+    color: #4a5568;
+}
+
+.card-features {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid #e2e8f0;
+    color: #4a5568;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+}
+
+.feature-icon {
+    margin-right: 10px;
+}
+
+.card-realtor {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-top: 1px solid #e2e8f0;
+    background-color: #f7fafc;
+}
+
+.realtor-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.realtor-name {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #1a202c;
+}
+
+.realtor-phone {
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.card-spacing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap between cards as needed */
+    justify-content: space-between; 
+    /* margin-top: 10px;
+    margin-bottom: 50px;  */
+}

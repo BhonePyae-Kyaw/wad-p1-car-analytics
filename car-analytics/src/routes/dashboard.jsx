@@ -6,11 +6,22 @@ import cars from "../assets/json/taladrod-cars.json";
 import TableComponent from "../components/table";
 import DoughnutChart from "../components/DoughnutChart";
 import StackedBarChart from "../components/StackedBarChart";
+import Cards from "../components/card";
+import Pagination from "../components/pagination";
 
 function Dashboard() {
   const [carData, setCarData] = useState([]);
   const [brands, setBrands] = useState([]);
   const [carsCount, setCarsCount] = useState([]);
+
+  const testCar = cars.Cars[0];
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 32;
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = cars.Cars.slice(indexOfFirstItem, indexOfLastItem);
 
   useEffect(() => {
     const processData = () => {
@@ -85,7 +96,21 @@ function Dashboard() {
         <TableComponent carData={carData} />
       </div>
       {/* Car showing starts here */}
-      <div>Cars showing</div>
+      <div>
+        <b style={{fontSize: '24px'}}>Car Cards</b>
+        <div></div>
+        <div className="card-spacing">
+          {currentItems.map((car, index) => (
+            <Cards key={index} car={car} />
+            ))}
+        </div>
+        <Pagination 
+                currentPage={currentPage}
+                totalItems={cars.Cars.length}
+                itemsPerPage={itemsPerPage}
+                onPageChange={setCurrentPage}
+            />
+      </div>
     </div>
   );
 }
