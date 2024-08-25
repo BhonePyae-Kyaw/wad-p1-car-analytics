@@ -5,19 +5,20 @@
 Car Analytics is a web application for market owners, offering detailed insights into various car models and brands. The platform features tables for model and brand comparisons, bar and pie charts for brand distribution, and car cards displaying essential details. Additionally, the highlight page allows users to view and manage their favorited cars.
 
 ## Features
-**Dash Board**
-- **Car Model Comparison:** Compare different car models based on various specifications such as engine performance, fuel efficiency, safety ratings, and more.
-- **Interactive Visualizations:** Explore data through interactive charts and graphs that present car brand distribution in an easy-to-understand format.
-- **Search Functionality:** Quickly find specific car models or brands using the powerful search feature.
-- **Price Overview:** View and compare prices of various car models and brands in a clear and organized table.
-
-**Car Cards**
-- **Detailed Information:** Each car card displays essential details such as model, year, price, and location, giving market owners a quick overview of the cars available.
-- **Favorite Feature:** Easily mark cars as favorites to keep track of them for future reference.
-
+ 
+Website essentially consists of 2 pages, dashboard for general information and comparison about all the cars ,and highlight to view all the highlighted cars.
+ 
+**Dash Board Page**
+- **Pie Chart:** Pie Chart for car brands distribution containing car amount and the distribution percentage of respective brands, including an informative legend.
+- **Stacked bar chart:** Stacked Bar Chart for car models distribution containing car amount and the distribution percentage of respective models of every brand, including                           an informative legend.
+- **Table:** Table depicting information regarding Total prices(baht) of respective models of brands with avaiable car amounts each.
+- **Car Cards:** Car Cards displaying essential details such as model, year, price, and location, with respective image. The cards may also be highlighted and stored in                      local storage to be shown in the highlight page.
+- **Card Filter:** Filter the car cards by respective brands.
+- **Pagination:** Pagination for Car Cards.
+ 
 **Highlight Page**
-- **Favorited Cars Display:** View all the cars you’ve favorited in one place, organized similarly to the dashboard but without pagination.
-- **Remove from Highlights:** Quickly remove cars from your favorites with a single click.
+- **Highlighted Cars Display:** View all the car cards you’ve highlighted orderly in one place, organized similarly to the dashboard but without pagination.
+- **Remove from Highlights:** Remove cars from your Highlights with a single click.
 
 ## Screenshots
 - **Main Menu:** This is the main navigation of the project: Dashboard and Highlight.
@@ -53,7 +54,13 @@ Car Analytics is a web application for market owners, offering detailed insights
 ## Project Members
 **CSX4107-Web Application Development - Section - 541**
 
-- **[Moe Myint Mo San](https://github.com/your-github-username)**
+- **[Moe Myint Mo San](https://github.com/MoeMyintMoSan)**
+  **Contributed parts**
+  - Car Cards
+  - Car Highlight
+  - Card pagination
+  - Highlight Page 
+  - Related README.md part: Project Description, Features
 - **[Bhone Pyae Kyaw](https://github.com/BhonePyae-Kyaw)**  
   **Contributed parts**
   - Project setup
