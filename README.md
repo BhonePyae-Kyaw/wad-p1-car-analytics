@@ -72,7 +72,12 @@ Car Analytics is a web application for market owners, offering detailed insights
 - React Router - Library for handling navigation and routing within the project.
 - Local Storage - Web Storage API used for user's favorite car selections.
 - JSON - Data format used for storing and parsing car data.
-- React hooks: React feature used for state management and side effect in functional components. 
+- React hooks: React feature used for state management and side effect in functional components.
+
+- ## Credits
+
+This project includes CSS styling from the article [Creating Beautiful HTML Tables with CSS](https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l) by [dcode](https://dev.to/dcodeyt). The CSS has been adapted to fit the needs of this project. Many thanks to dcode for providing such a valuable resource!
+
  
 
 
