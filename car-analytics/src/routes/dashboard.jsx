@@ -4,7 +4,7 @@ import "../styles/dashboard.css";
 import Menu from "../components/menu";
 import cars from "../assets/json/taladrod-cars.json";
 import TableComponent from "../components/table";
-import DoughnutChart from "../components/DoughnutChart";
+import PieChart from "../components/PieChart";
 import StackedBarChart from "../components/StackedBarChart";
 import Cards from "../components/card";
 import Pagination from "../components/pagination";
@@ -33,7 +33,7 @@ function Dashboard() {
       cars.Cars.forEach((car) => {
         const brand = car.NameMMT.split(" ")[0];
         const model = car.Model;
-        const price = parseInt(car.Prc.replace(/[^0-9]/g, ""), 10); //remove non-numeric characters
+        const price = parseInt(car.Prc.replace(/[^0-9]/g, ""), 10);
 
         if (!brandModelMap[brand]) {
           brandModelMap[brand] = { totalCars: 0, totalValue: 0, models: {} };
@@ -81,7 +81,6 @@ function Dashboard() {
   return (
     <div id="dashboard">
       <Menu />
-      {/* Charts start here */}
       <div
         className="charts-container"
         style={{
@@ -95,7 +94,7 @@ function Dashboard() {
         }}
       >
         <div style={{ flex: 1, minHeight: "0" }}>
-          <DoughnutChart brands={brands} carsCount={carsCount} />
+          <PieChart brands={brands} carsCount={carsCount} />
         </div>
         <br />
         <div style={{ flex: 1, minHeight: "0" }}>
@@ -105,7 +104,6 @@ function Dashboard() {
       <div className="dashboard-content">
         <TableComponent carData={carData} />
       </div>
-      {/* Car showing starts here */}
       <div id="cars-container">
         <b style={{ fontSize: "24px" }}>Car</b>
         <div className="filter-items">

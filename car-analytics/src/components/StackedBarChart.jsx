@@ -30,17 +30,11 @@ function StackedBarChart({ carData }) {
     });
   });
 
-  const generateUniqueColors = (count) => {
-    const colors = [];
-    for (let i = 0; i < count; i++) {
-      colors.push(`hsl(${(i * 360) / count}, 70%, 50%)`);
-    }
-    return colors;
+  const generateRandomColor = () => {
+    return `hsl(${Math.random() * 360}, 70%, 50%)`;
   };
 
-  const uniqueColors = generateUniqueColors(allModels.size);
-
-  const datasets = Array.from(allModels).map((model, index) => {
+  const datasets = Array.from(allModels).map((model) => {
     const data = carData.map((brand) => {
       const modelData = brand.models.find((m) => m.model === model);
       return modelData ? modelData.count : 0;
@@ -49,7 +43,7 @@ function StackedBarChart({ carData }) {
     return {
       label: model,
       data: data,
-      backgroundColor: uniqueColors[index],
+      backgroundColor: generateRandomColor(),
     };
   });
 

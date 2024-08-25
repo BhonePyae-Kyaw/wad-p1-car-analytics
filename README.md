@@ -32,7 +32,7 @@ Car Analytics is a web application for market owners, offering detailed insights
 **CSX4107-WAD Sec542**
 - **6530173 - Moe Myint Mo San** 
 - **6530327 - Bhone Pyae Kyaw** 
-- **6530377 - Kyaw Ye Lwin@ANMOL** 
+- **6530377 - Kyaw Ye Lwin @ ANMOL** 
 
 ## Getting Started
 
@@ -57,8 +57,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Special thanks to [Mentor's Name] for guidance throughout the project.
 - Inspiration from similar car comparison websites and platforms.
-
-## Contact
-
-For any inquiries or feedback, feel free to reach out at [your.email@example.com].
 

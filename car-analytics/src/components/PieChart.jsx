@@ -1,11 +1,11 @@
-// DoughnutChart.jsx
+// PieChart.jsx
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function DoughnutChart({ brands, carsCount }) {
+function PieChart({ brands, carsCount }) {
   const total = carsCount.reduce((acc, count) => acc + count, 0);
   const percentages = carsCount.map((count) =>
     ((count / total) * 100).toFixed(1)
@@ -30,7 +30,7 @@ function DoughnutChart({ brands, carsCount }) {
     }))
     .sort((a, b) => b.count - a.count);
 
-  const doughnutChartData = {
+  const pieChartData = {
     labels: sortedData.map((item) => `${item.brand} (${item.percentage}%)`),
     datasets: [
       {
@@ -43,7 +43,7 @@ function DoughnutChart({ brands, carsCount }) {
     ],
   };
 
-  const doughnutChartOptions = {
+  const pieChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -58,13 +58,12 @@ function DoughnutChart({ brands, carsCount }) {
         },
       },
     },
-    cutout: "50%",
   };
 
   return (
     <div style={{ width: "100%", height: "100%", display: "flex" }}>
       <div style={{ width: "80%", height: "100%", paddingRight: "20px" }}>
-        <Doughnut data={doughnutChartData} options={doughnutChartOptions} />
+        <Pie data={pieChartData} options={pieChartOptions} />
       </div>
       <div
         style={{
@@ -98,4 +97,4 @@ function DoughnutChart({ brands, carsCount }) {
   );
 }
 
-export default DoughnutChart;
+export default PieChart;
