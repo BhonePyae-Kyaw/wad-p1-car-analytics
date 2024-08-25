@@ -131,7 +131,7 @@ function Dashboard() {
             </p>
           )}
           {currentItems.map((car, index) => (
-            <Cards key={index} car={car} getHighlights={{}} />
+            <Cards key={index} car={car} getHighlights={() => {}} />
           ))}
         </div>
         <Pagination
