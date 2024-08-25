@@ -11,14 +11,14 @@ Website essentially consists of 2 pages, dashboard for general information and c
 **Dash Board Page**
 - **Pie Chart:** Pie Chart for car brands distribution containing car amount and the distribution percentage of respective brands, including an informative legend.
 - **Stacked bar chart:** Stacked Bar Chart for car models distribution containing car amount and the distribution percentage of respective models of every brand, including                           an informative legend.
-- **Table:** Table depicting information regarding Total prices(baht) of respective models of brands with avaiable car amounts each.
-- **Car Cards:** Car Cards displaying essential details such as model, year, price, and location, with respective image. The cards may also be highlighted and stored in                      local storage to be shown in the highlight page.
+- **Table:** Table showing the total prices (in baht) for each model by brand, along with the number of available cars for each model.
+- **Car Cards:** Car Cards displaying essential details such as model, year, price, and location, with respective image. The cards may also be highlighted by clicking the                    heart icon and stored in local storage to be shown in the highlight page.
 - **Card Filter:** Filter the car cards by respective brands.
 - **Pagination:** Pagination for Car Cards.
  
 **Highlight Page**
 - **Highlighted Cars Display:** View all the car cards you’ve highlighted orderly in one place, organized similarly to the dashboard but without pagination.
-- **Remove from Highlights:** Remove cars from your Highlights with a single click.
+- **Remove from Highlights:** Remove cars from your Highlights by clicking the heart icon.
 
 ## Screenshots
 - **Main Menu:** This is the main navigation of the project: Dashboard and Highlight.
@@ -54,7 +54,7 @@ Website essentially consists of 2 pages, dashboard for general information and c
 ## Project Members
 **CSX4107-Web Application Development - Section - 541**
 
-- **[Moe Myint Mo San](https://github.com/MoeMyintMoSan)**
+- **[Moe Myint Mo San](https://github.com/MoeMyintMoSan)** <br />
   **Contributed parts**
   - Car Cards
   - Car Highlight
@@ -94,7 +94,7 @@ Website essentially consists of 2 pages, dashboard for general information and c
 
 - ## Credits
 
-This project includes CSS styling from the article [Creating Beautiful HTML Tables with CSS](https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l) by [dcode](https://dev.to/dcodeyt). The CSS has been adapted to fit the needs of this project. Many thanks to dcode for providing such a valuable resource!
+This project includes CSS styling from the article [Creating Beautiful HTML Tables with CSS](https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l) by [dcode](https://dev.to/dcodeyt). The CSS has been adapted to fit the needs of this project. Many thanks to dcode for providing such a valuable resource.
 
  
 
