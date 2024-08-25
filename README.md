@@ -20,21 +20,32 @@ Car Analytics is a web application for market owners, offering detailed insights
 - **Remove from Highlights:** Quickly remove cars from your favorites with a single click.
 
 ## Screenshots
+- **Main Menu:** This is the main navigation of the project: Dashboard & Highlight.
 <div align="center">
     <img src="./screenshots/Main Navigation.png" width="400px"></img>
 </div>
+
+- **Visual Display (Pie Chart):** This Pie Chart shows the car brand distribution.
 <div align="center">
     <img src="./screenshots/PieChart.png" width="400px"></img>
 </div>
+
+- **Visual Display (Stacked Bar Chart):** This Stacked Bar Chart shows the car model distribution by brand.
 <div align="center">
     <img src="./screenshots/StackBarChart.png" width="400px"></img>
 </div>
+
+- **Car Data Table:** This table shows the car brand, its model, the number of car available and the total value (in baht)
 <div align="center">
     <img src="./screenshots/CarDash.png" width="400px"></img>
 </div>
+
+- **Car card:** This part display all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars
 <div align="center">
     <img src="./screenshots/CarDisplay.png" width="400px"></img>
 </div>
+
+- **Highlight:** This highlight page include all the car that you have chosen (by clicking heart button)
 <div align="center">
     <img src="./screenshots/Highlight.png" width="400px"></img>
 </div>
@@ -55,6 +66,13 @@ Car Analytics is a web application for market owners, offering detailed insights
 5. Access the app at `http://localhost:3000` in your web browser.
 
 ## Technologies Used
-
+*React - JavaScript Library for user interface, used as core framework for this project.
+*CSS - Styling language used for layout design and custom component.
+*Chart.js - Javascript charting library (via react-chartjs-2) for creating interactive visualization: pie and bar chart.
+*React Router - Library for handling navigation and routing within the project.
+*Local Storage - Web Storage API used for user's favorite car selections.
+*JSON - Data format used for storing and parsing car data.
+*React hooks: React feature used for state management and side effect in functional components. 
+ 
 
 
