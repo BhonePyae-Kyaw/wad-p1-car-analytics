@@ -12,7 +12,6 @@ function Highlight() {
     setHighlightedCars(storedHighlights);
   };
 
-  // Retrieve favorited cars from local storage when the component mounts
   useEffect(() => {
     getHighlights();
   }, []);
