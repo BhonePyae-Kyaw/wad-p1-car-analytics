@@ -22,32 +22,32 @@ Car Analytics is a web application for market owners, offering detailed insights
 ## Screenshots
 - **Main Menu:** This is the main navigation of the project: Dashboard and Highlight.
 <div align="center">
-    <img src="./screenshots/Main Navigation.png" width="400px"></img>
+    <img src="./screenshots/Main Navigation.png" width="600px"></img>
 </div>
 
 - **Visual Display (Pie Chart):** This Pie Chart shows the car brand distribution.
 <div align="center">
-    <img src="./screenshots/PieChart.png" width="400px"></img>
+    <img src="./screenshots/PieChart.png" width="600px"></img>
 </div>
 
 - **Visual Display (Stacked Bar Chart):** This Stacked Bar Chart shows the car model distribution by brand.
 <div align="center">
-    <img src="./screenshots/StackBarChart.png" width="400px"></img>
+    <img src="./screenshots/StackBarChart.png" width="600px"></img>
 </div>
 
 - **Car Data Table:** This table shows the car brand, its model, the number of car available and the total value (in baht).
 <div align="center">
-    <img src="./screenshots/CarDash.png" width="400px"></img>
+    <img src="./screenshots/CarDash.png" width="600px"></img>
 </div>
 
 - **Car card:** This part display all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars.
 <div align="center">
-    <img src="./screenshots/CarDisplay.png" width="400px"></img>
+    <img src="./screenshots/CarDisplay.png" width="600px"></img>
 </div>
 
 - **Highlight:** This highlight page include all the car that you have chosen (by clicking heart button).
 <div align="center">
-    <img src="./screenshots/Highlight.png" width="400px"></img>
+    <img src="./screenshots/Highlight.png" width="600px"></img>
 </div>
 
 ## Project Members
