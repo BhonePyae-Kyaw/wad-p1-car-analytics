@@ -54,7 +54,7 @@ Car Analytics is a web application for market owners, offering detailed insights
 **CSX4107-Web Application Development - Section - 541**
 
 - **[Moe Myint Mo San](https://github.com/your-github-username)**
-- **[Bhone Pyae Kyaw]([https://github.com/their-github-username](https://github.com/BhonePyae-Kyaw))**  
+- **[Bhone Pyae Kyaw](https://github.com/BhonePyae-Kyaw)**  
   **Contributed parts**
   - Project setup
   - Menu with routing
