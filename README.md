@@ -20,9 +20,23 @@ Car Analytics is a web application for market owners, offering detailed insights
 - **Remove from Highlights:** Quickly remove cars from your favorites with a single click.
 
 ## Screenshots
-
 <div align="center">
-    <img src="./screenshots/Highlight.jpg" width="400px"></img>
+    <img src="./screenshots/Main Navigation.png" width="400px"></img>
+</div>
+<div align="center">
+    <img src="./screenshots/PieChart.png" width="400px"></img>
+</div>
+<div align="center">
+    <img src="./screenshots/StackBarChart.png" width="400px"></img>
+</div>
+<div align="center">
+    <img src="./screenshots/CarDash.png" width="400px"></img>
+</div>
+<div align="center">
+    <img src="./screenshots/CarDisplay.png" width="400px"></img>
+</div>
+<div align="center">
+    <img src="./screenshots/Highlight.png" width="400px"></img>
 </div>
 
 ## Project Members
