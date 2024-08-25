@@ -54,7 +54,7 @@ Car Analytics is a web application for market owners, offering detailed insights
 
 **CSX4107-Web Application Development - Section - 541**
 - **6530173 - Moe Myint Mo San** 
-- **6530327 - Bhone Pyae Kyaw**
+- **6530327 - Bhone Pyae Kyaw** <br />
   **Contributed parts**
   - Project setup
   - Menu with routing
