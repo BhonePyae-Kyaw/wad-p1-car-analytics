@@ -41,12 +41,12 @@ Website essentially consists of 2 pages, dashboard for general information and c
     <img src="./screenshots/CarDash.png" width="100%"></img>
 </div>
 
-- **Car card:** This part display all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars.
+- **Car card:** This part displays all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars.
 <div align="center">
     <img src="./screenshots/CarDisplay.png" width="100%"></img>
 </div>
 
-- **Highlight:** This highlight page include all the car that you have chosen (by clicking heart button).
+- **Highlight:** This highlight page includes all the car that you have chosen (by clicking heart button).
 <div align="center">
     <img src="./screenshots/Highlight.png" width="100%"></img>
 </div>
