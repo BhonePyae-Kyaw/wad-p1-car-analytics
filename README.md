@@ -60,10 +60,10 @@ Car Analytics is a web application for market owners, offering detailed insights
 ## Getting Started
 
 1. Clone the repository: `git clone https://github.com/yourusername/wad-p1-car-analytics.git`
-2. Navigate to the project directory: `cd wad-p1-car-analytics`
-3. Install dependencies: `npm install`
-4. Run the application: `npm start`
-5. Access the app at `http://localhost:3000` in your web browser.
+2. Navigate to the project directory: `cd wad-p1-car-analytics/car-analytics`
+3. Install dependencies: `pnpm install`
+4. Run the application: `npm run dev`
+5. Access the app at `http://localhost:5173/project1` or as defined by your terminal in your web browser.
 
 ## Technologies Used
 - React - JavaScript Library for user interface, used as core framework for this project.
