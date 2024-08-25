@@ -66,13 +66,13 @@ Car Analytics is a web application for market owners, offering detailed insights
 5. Access the app at `http://localhost:3000` in your web browser.
 
 ## Technologies Used
-*React - JavaScript Library for user interface, used as core framework for this project.
-*CSS - Styling language used for layout design and custom component.
-*Chart.js - Javascript charting library (via react-chartjs-2) for creating interactive visualization: pie and bar chart.
-*React Router - Library for handling navigation and routing within the project.
-*Local Storage - Web Storage API used for user's favorite car selections.
-*JSON - Data format used for storing and parsing car data.
-*React hooks: React feature used for state management and side effect in functional components. 
+- React - JavaScript Library for user interface, used as core framework for this project.
+- CSS - Styling language used for layout design and custom component.
+- Chart.js - Javascript charting library (via react-chartjs-2) for creating interactive visualization: pie and bar chart.
+- React Router - Library for handling navigation and routing within the project.
+- Local Storage - Web Storage API used for user's favorite car selections.
+- JSON - Data format used for storing and parsing car data.
+- React hooks: React feature used for state management and side effect in functional components. 
  
 
 
