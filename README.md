@@ -77,7 +77,7 @@ Website essentially consists of 2 pages, dashboard for general information and c
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/wad-p1-car-analytics.git`
+1. Clone the repository: [`git clone https://github.com/yourusername/wad-p1-car-analytics.git`](https://github.com/BhonePyae-Kyaw/wad-p1-car-analytics.git)
 2. Navigate to the project directory: `cd wad-p1-car-analytics`
 3. Install dependencies: `pnpm install`
 4. Run the application: `npm run dev`
@@ -92,7 +92,7 @@ Website essentially consists of 2 pages, dashboard for general information and c
 - JSON - Data format used for storing and parsing car data.
 - React hooks: React feature used for state management and side effect in functional components.
 
-- ## Credits
+## Credits
 
 This project includes CSS styling from the article [Creating Beautiful HTML Tables with CSS](https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l) by [dcode](https://dev.to/dcodeyt). The CSS has been adapted to fit the needs of this project. Many thanks to dcode for providing such a valuable resource.
 
