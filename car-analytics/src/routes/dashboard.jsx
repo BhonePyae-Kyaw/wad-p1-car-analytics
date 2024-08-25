@@ -81,7 +81,7 @@ function Dashboard() {
   return (
     <div id="dashboard">
       <Menu />
-      {/* Charts start here */}
+      {/* Charts and tables start here */}
       <div
         className="charts-container"
         style={{
@@ -127,8 +127,13 @@ function Dashboard() {
         </div>
 
         <div className="card-spacing" style={{ marginTop: "20px" }}>
+          {currentItems.length === 0 && (
+            <p style={{ color: "#009879", fontSize: "24px" }}>
+              The car models from this brand are currently out of stock!
+            </p>
+          )}
           {currentItems.map((car, index) => (
-            <Cards key={index} car={car} />
+            <Cards key={index} car={car} getHighlights={{}} />
           ))}
         </div>
         <Pagination

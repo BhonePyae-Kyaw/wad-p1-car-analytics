@@ -7,11 +7,11 @@ import Highlight from "./routes/highlight";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/project1/",
     element: <Dashboard />,
   },
   {
-    path: "/highlight",
+    path: "/project1/highlight",
     element: <Highlight />,
   },
 ]);
