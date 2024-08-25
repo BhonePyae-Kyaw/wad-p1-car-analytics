@@ -22,7 +22,7 @@ Car Analytics is a web application for market owners, offering detailed insights
 ## Screenshots
 
 <div align="center">
-    <img src="/screenshots/Highlight.jpg" width="400px"></img>
+    <img src="./screenshots/Highlight.jpg" width="400px"></img>
 </div>
 
 ## Project Members
