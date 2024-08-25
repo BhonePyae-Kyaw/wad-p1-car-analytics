@@ -7,7 +7,7 @@ function Menu() {
   return (
     <div id="menu-container">
       <div id="menu-mini-container">
-        <NavLink to="/">
+        <NavLink to="/wad-p1-car-analytics/">
           <div className="items-container">
             <div>
               <img id="logo-image" src={images.car} alt="Car Logo" />
@@ -18,7 +18,7 @@ function Menu() {
         <div className="items-container list">
           <div className="list-items">
             <NavLink
-              to="/"
+              to="/wad-p1-car-analytics/"
               end
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -28,7 +28,7 @@ function Menu() {
 
           <div className="list-items">
             <NavLink
-              to="/highlight"
+              to="/wad-p1-car-analytics/highlight"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Highlight
