@@ -61,7 +61,7 @@ Car Analytics is a web application for market owners, offering detailed insights
   - Table for car displays
   - Car filtering by brand for car displays
   - Related README.md part
-- **[Kyaw Ye Lwin @ ANMOL](https://github.com/KyawYeLwin)**
+- **[Kyaw Ye Lwin @ ANMOL](https://github.com/KyawYeLwin)** <br />
   **Contributed parts**
   - Pie chart sorted: Brand Distribution
   - Stacked bar chart: Distribution by Brand
