@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import hearts from "../assets/constants/hearts";
 import "../styles/card.css";
 
-function Cards({ car }) {
+function Cards({ car, getHighlights }) {
   const {
     Img600: imageUrl,
     Prc: price,
@@ -25,23 +25,17 @@ function Cards({ car }) {
 
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
-    // const highlights = JSON.parse(localStorage.getItem('highlights')) || [];
     let highlights = JSON.parse(localStorage.getItem("highlights")) || [];
 
     if (!isFavorite) {
-      // Add car to highlights
+      // If it is not in the highlight yet, add car to highlights.
       highlights.push(car);
     } else {
       // Remove car from highlights
-      // const updatedHighlights = highlights.filter(item => item.Cid !== Cid);
-      // localStorage.setItem('highlights', JSON.stringify(updatedHighlights));
       highlights = highlights.filter((item) => item.Cid !== Cid);
-      window.location.reload();
     }
-
-    // localStorage.setItem('highlights', JSON.stringify(highlights));
     localStorage.setItem("highlights", JSON.stringify(highlights));
-    console.log("clicked", isFavorite);
+    getHighlights();
   };
 
   return (
