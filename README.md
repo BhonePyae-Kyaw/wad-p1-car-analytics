@@ -20,7 +20,7 @@ Car Analytics is a web application for market owners, offering detailed insights
 - **Remove from Highlights:** Quickly remove cars from your favorites with a single click.
 
 ## Screenshots
-- **Main Menu:** This is the main navigation of the project: Dashboard & Highlight.
+- **Main Menu:** This is the main navigation of the project: Dashboard and Highlight.
 <div align="center">
     <img src="./screenshots/Main Navigation.png" width="400px"></img>
 </div>
@@ -35,24 +35,24 @@ Car Analytics is a web application for market owners, offering detailed insights
     <img src="./screenshots/StackBarChart.png" width="400px"></img>
 </div>
 
-- **Car Data Table:** This table shows the car brand, its model, the number of car available and the total value (in baht)
+- **Car Data Table:** This table shows the car brand, its model, the number of car available and the total value (in baht).
 <div align="center">
     <img src="./screenshots/CarDash.png" width="400px"></img>
 </div>
 
-- **Car card:** This part display all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars
+- **Car card:** This part display all the car card with its details. Additionally, it includes fitering for each brand and pagination to view more cars.
 <div align="center">
     <img src="./screenshots/CarDisplay.png" width="400px"></img>
 </div>
 
-- **Highlight:** This highlight page include all the car that you have chosen (by clicking heart button)
+- **Highlight:** This highlight page include all the car that you have chosen (by clicking heart button).
 <div align="center">
     <img src="./screenshots/Highlight.png" width="400px"></img>
 </div>
 
 ## Project Members
 
-**CSX4107-WAD Sec542**
+**CSX4107-Web Application Development - Section - 541**
 - **6530173 - Moe Myint Mo San** 
 - **6530327 - Bhone Pyae Kyaw** 
 - **6530377 - Kyaw Ye Lwin @ ANMOL** 
