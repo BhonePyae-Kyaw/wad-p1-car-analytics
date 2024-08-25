@@ -21,11 +21,9 @@ Car Analytics is a web application for market owners, offering detailed insights
 
 ## Screenshots
 
-![Home Page](path/to/screenshot1.png)
-*Description of the home page or feature showcased*
-
-![Comparison Page](path/to/screenshot2.png)
-*Description of the comparison page or feature showcased*
+<div align="center">
+    <img src="/screenshots/Highlight.jpg" width="400px"></img>
+</div>
 
 ## Project Members
 
@@ -44,17 +42,5 @@ Car Analytics is a web application for market owners, offering detailed insights
 
 ## Technologies Used
 
-- **Frontend:** React, HTML, CSS, JavaScript
-- **Backend:** Node.js, Express
-- **Database:** MongoDB
-- **Deployment:** [Platform e.g., Heroku, Vercel]
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Special thanks to [Mentor's Name] for guidance throughout the project.
-- Inspiration from similar car comparison websites and platforms.
 
