@@ -12,6 +12,7 @@
 .dashboard-content {
   width: 100%;
 }
+
 .filter-items {
   display: flex;
   justify-content: start;
