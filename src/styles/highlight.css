@@ -46,7 +46,7 @@
   background-color: #d9363e;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .highlight-content {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

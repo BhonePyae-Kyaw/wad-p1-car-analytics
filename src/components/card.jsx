@@ -17,7 +17,6 @@ function Cards({ car, getHighlights }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
-    // Check if the car is in the highlights and set the favorite status accordingly
     const highlights = JSON.parse(localStorage.getItem("highlights")) || [];
     const carIsFavorited = highlights.some((item) => item.Cid === Cid);
     setIsFavorite(carIsFavorited);
@@ -28,10 +27,8 @@ function Cards({ car, getHighlights }) {
     let highlights = JSON.parse(localStorage.getItem("highlights")) || [];
 
     if (!isFavorite) {
-      // If it is not in the highlight yet, add car to highlights.
       highlights.push(car);
     } else {
-      // Remove car from highlights
       highlights = highlights.filter((item) => item.Cid !== Cid);
     }
     localStorage.setItem("highlights", JSON.stringify(highlights));
