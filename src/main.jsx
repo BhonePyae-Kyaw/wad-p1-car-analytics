@@ -1,17 +1,21 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router-dom";
 import Dashboard from "./routes/dashboard";
 import Highlight from "./routes/highlight";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/wad-p1-car-analytics/",
+    path: "/",
     element: <Dashboard />,
   },
   {
-    path: "/wad-p1-car-analytics/highlight",
+    path: "/highlight",
     element: <Highlight />,
   },
 ]);
