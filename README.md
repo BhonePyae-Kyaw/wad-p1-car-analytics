@@ -68,7 +68,7 @@ Website essentially consists of 2 pages, dashboard for general information and c
   - Table for car displays
   - Car filtering by brand for car displays
   - Related README.md part
-- **[Kyaw Ye Lwin @ ANMOL](https://github.com/KyawYeLwin)** <br />
+- **[Anmol Sharma](https://github.com/AlpakaaaaaScript)** <br />
   **Contributed parts**
   - Pie chart sorted: Brand Distribution
   - Stacked bar chart: Distribution by Brand
